@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/*.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: auto;
+  width: auto;
+}*/
+
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.layer1 {
+      width: 96px;
+      box-sizing: content-box;
+      height: 48px;
+      background: #eee;
+      border-color: black;
+      border-style: solid;
+      border-width: 2px 2px 50px 2px;
+      border-radius: 100%;
+      position: relative;
+      animation-name: spin;
+  animation-duration: 2s;
+/*  animation-iteration-count: infinite;*/
+    }
+ .layer1:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background: #eee;
+      border: 18px solid black;
+      border-radius: 100%;
+      width: 12px;
+      height: 12px;
+      box-sizing: content-box;
+  /*    animation-name: spin;
+  animation-duration: 2s;*/
+  /*animation-iteration-count: infinite;*/
+    }
+ .layer1:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: black;
+      border: 18px solid #eee;
+      border-radius: 100%;
+      width: 12px;
+      height: 12px;
+      box-sizing: content-box;
+/*      animation-name: spin;
+  animation-duration: 2s;*/
+ /* animation-iteration-count: infinite;*/
+    }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(360deg);
+}
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(300px);
+  }
+  25% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(700px);
+}
+}
+
+.shape-interaction {
+ /* -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;*/
+  /*animation-name: spin;*/
+  /*transform: translateX(500px);*/
+  animation-name: move;
+}
+
+
+
+
+
